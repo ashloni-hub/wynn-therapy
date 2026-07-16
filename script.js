@@ -34,3 +34,37 @@ if (prefersReducedMotion) {
   );
   revealEls.forEach((el) => observer.observe(el));
 }
+
+// Hero image carousel
+const heroCarousel = document.getElementById('heroCarousel');
+if (heroCarousel) {
+  const slides = [...heroCarousel.querySelectorAll('.hero-slide')];
+  const dots = [...heroCarousel.querySelectorAll('.hero-dot')];
+  let activeIndex = 0;
+  let carouselTimer;
+
+  function goToSlide(index) {
+    slides[activeIndex].classList.remove('is-active');
+    dots[activeIndex].classList.remove('is-active');
+    activeIndex = index;
+    slides[activeIndex].classList.add('is-active');
+    dots[activeIndex].classList.add('is-active');
+  }
+
+  function startCarousel() {
+    carouselTimer = setInterval(() => {
+      goToSlide((activeIndex + 1) % slides.length);
+    }, 5000);
+  }
+
+  if (!prefersReducedMotion && slides.length > 1) {
+    startCarousel();
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(carouselTimer);
+        goToSlide(i);
+        startCarousel();
+      });
+    });
+  }
+}
