@@ -60,7 +60,7 @@
         <span class="eyebrow">Individual therapy in New York</span>
         <h1>Individual Therapy for <span class="hl">Anxiety, Trauma</span> &amp; Relationships</h1>
         <p class="lede">Virtual individual therapy across New York to build self-worth, process trauma, and create secure, fulfilling relationships.</p>
-        <a class="btn btn-primary" href="index.html#contact">Get Started</a>
+        <a class="btn btn-primary js-open-cta-modal" href="index.html#contact">Get Started</a>
       </div>
       <div class="hero-figure reveal reveal-from-right">
         <div class="card">
@@ -166,7 +166,7 @@
         </li>
       </ol>
       <div class="process-cta reveal">
-        <a class="btn btn-primary" href="index.html#contact">Get Started</a>
+        <a class="btn btn-primary js-open-cta-modal" href="index.html#contact">Get Started</a>
       </div>
     </div>
   </section>
@@ -269,6 +269,27 @@
     </div>
   </div>
 </footer>
+
+<div class="cta-modal" id="ctaModal" aria-hidden="true">
+  <div class="cta-modal-backdrop" data-modal-close></div>
+  <div class="cta-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="ctaModalTitle">
+    <button class="cta-modal-close" type="button" aria-label="Close" data-modal-close>&times;</button>
+    <span class="eyebrow eyebrow-center">Ready when you are</span>
+    <h3 id="ctaModalTitle">Ready to start?</h3>
+    <p>Reach out for a free consultation &mdash; no pressure, just a conversation.</p>
+    <form class="cta-form" id="ctaForm">
+      <label class="sr-only" for="ctaName">Name</label>
+      <input type="text" id="ctaName" name="name" placeholder="Name" required />
+      <label class="sr-only" for="ctaEmail">Email</label>
+      <input type="email" id="ctaEmail" name="email" placeholder="Email" required />
+      <label class="sr-only" for="ctaPhone">Phone</label>
+      <input type="tel" id="ctaPhone" name="phone" placeholder="Phone" required />
+      <label class="sr-only" for="ctaMessage">Message</label>
+      <textarea id="ctaMessage" name="message" placeholder="Message" rows="4" required></textarea>
+      <button class="btn btn-primary cta-form-submit" type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

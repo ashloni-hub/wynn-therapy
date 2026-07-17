@@ -60,11 +60,11 @@
     <div class="blob blob-8"></div>
     <div class="wrap hero-inner">
       <div class="hero-copy reveal">
-        <span class="eyebrow">Virtual therapy &middot; NYC &amp; all of New York State</span>
-        <h1>Let&rsquo;s untangle the patterns you <span class="hl">keep repeating.</span></h1>
+        <span class="eyebrow">Virtual therapy for adults in NYC and across New York State</span>
+        <h1>Attachment &amp; <span class="hl">Relationship</span> Therapy in New York</h1>
         <p class="lede">Attachment and relationship therapy for high-achieving, emotionally insightful adults who are done overthinking and ready to understand themselves deeper.</p>
         <div class="hero-cta-row">
-          <a class="btn btn-primary" href="#contact">Get started</a>
+          <a class="btn btn-primary js-open-cta-modal" href="#contact">Get started</a>
           <a class="arrow-link" href="#services">View our services <span class="arrow">&rarr;</span></a>
         </div>
       </div>
@@ -244,7 +244,7 @@
     <div class="wrap">
       <div class="section-head center reveal">
         <span class="eyebrow eyebrow-center script-eyebrow">did you know?</span>
-        <h2>The research is quietly on your side</h2>
+        <h2>The research is quietly on your side too</h2>
         <p class="stats-sub">Therapy is one of the most well-studied ways to feel better, relate better, and grow. Here&rsquo;s a little proof to keep in your back pocket.</p>
       </div>
       <div class="stats-grid">
@@ -297,9 +297,10 @@
       </div>
       <div class="bio-copy reveal">
         <span class="eyebrow">Meet Elizabeth Wynn</span>
-        <h2>Licensed Creative Arts Therapist in NYC</h2>
-        <p>Over nine years of experience across diverse New York City mental health settings, including public schools, intensive outpatient programs, supportive housing, and community-based work with adults, children, and families.</p>
-        <p>Collaborative, strength-based therapy that helps clients make sense of their experiences, access inner resources, and create meaningful, lasting change.</p>
+        <h2>Creative Arts Therapist in New York</h2>
+        <p>Elizabeth Wynn is a Licensed Creative Arts Therapist based in Brooklyn, NY, with over nine years of experience across diverse New York City mental health settings, including public schools, intensive outpatient programs, supportive housing, and community-based work with adults, children, and families.</p>
+        <p>These experiences shaped her deeply compassionate, culturally responsive approach and her belief that every person has the capacity to heal.</p>
+        <p>In her virtual practice, she offers collaborative, strength-based therapy that helps clients make sense of their experiences, access their inner resources, and create meaningful, lasting change.</p>
         <a class="btn btn-primary" href="#about">More About Me</a>
       </div>
     </div>
@@ -365,7 +366,7 @@
         </li>
       </ol>
       <div class="process-cta reveal">
-        <a class="btn btn-primary" href="#contact">Get Started</a>
+        <a class="btn btn-primary js-open-cta-modal" href="#contact">Get Started</a>
       </div>
     </div>
   </section>
@@ -433,6 +434,27 @@
     </div>
   </div>
 </footer>
+
+<div class="cta-modal" id="ctaModal" aria-hidden="true">
+  <div class="cta-modal-backdrop" data-modal-close></div>
+  <div class="cta-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="ctaModalTitle">
+    <button class="cta-modal-close" type="button" aria-label="Close" data-modal-close>&times;</button>
+    <span class="eyebrow eyebrow-center">Ready when you are</span>
+    <h3 id="ctaModalTitle">Ready to start?</h3>
+    <p>Reach out for a free consultation &mdash; no pressure, just a conversation.</p>
+    <form class="cta-form" id="ctaForm">
+      <label class="sr-only" for="ctaName">Name</label>
+      <input type="text" id="ctaName" name="name" placeholder="Name" required />
+      <label class="sr-only" for="ctaEmail">Email</label>
+      <input type="email" id="ctaEmail" name="email" placeholder="Email" required />
+      <label class="sr-only" for="ctaPhone">Phone</label>
+      <input type="tel" id="ctaPhone" name="phone" placeholder="Phone" required />
+      <label class="sr-only" for="ctaMessage">Message</label>
+      <textarea id="ctaMessage" name="message" placeholder="Message" rows="4" required></textarea>
+      <button class="btn btn-primary cta-form-submit" type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
