@@ -1,3 +1,13 @@
+// Sticky header: tint background once scrolled
+const headerWrap = document.getElementById('headerWrap');
+if (headerWrap) {
+  function updateHeaderState() {
+    headerWrap.classList.toggle('is-scrolled', window.scrollY > 10);
+  }
+  updateHeaderState();
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+}
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const primaryNav = document.getElementById('primaryNav');
